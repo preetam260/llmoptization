@@ -1,0 +1,128 @@
+{
+  "E1_Control_LoRA": {
+    "exp_id": "E1_Control_LoRA",
+    "desc": "Baseline: Alpaca control, random order, QLoRA, AdamW, SDPA",
+    "tokens_processed": 2015232,
+    "total_steps": 123,
+    "final_val_ppl": 6.906,
+    "best_val_ppl": 6.6811,
+    "avg_tps": 3982.1,
+    "peak_vram_gb": 4.45,
+    "total_time_min": 137.3,
+    "trainable_params": 41943040,
+    "ppl_history": [
+      6.6811,
+      8.1384,
+      7.3853,
+      6.9279,
+      6.906
+    ],
+    "optimizer": "adamw",
+    "attention": "sdpa"
+  },
+  "E2_Golden_LoRA": {
+    "exp_id": "E2_Golden_LoRA",
+    "desc": "Data quality: Golden SFT, random order, QLoRA, AdamW, SDPA",
+    "tokens_processed": 2015232,
+    "total_steps": 123,
+    "final_val_ppl": 6.4266,
+    "best_val_ppl": 5.9316,
+    "avg_tps": 3884.5,
+    "peak_vram_gb": 4.48,
+    "total_time_min": 140.8,
+    "trainable_params": 41943040,
+    "ppl_history": [
+      6.1608,
+      5.9316,
+      6.0728,
+      5.9573,
+      6.4266
+    ],
+    "optimizer": "adamw",
+    "attention": "sdpa"
+  },
+  "E3_Control_LFR": {
+    "exp_id": "E3_Control_LFR",
+    "desc": "Curriculum: Alpaca control, LFR+replay, QLoRA, AdamW, SDPA",
+    "tokens_processed": 2015232,
+    "total_steps": 123,
+    "final_val_ppl": 6.3226,
+    "best_val_ppl": 6.1582,
+    "avg_tps": 3983.3,
+    "peak_vram_gb": 4.46,
+    "total_time_min": 136.7,
+    "trainable_params": 41943040,
+    "ppl_history": [
+      6.8812,
+      6.9161,
+      7.1594,
+      6.1582,
+      6.3226
+    ],
+    "optimizer": "adamw",
+    "attention": "sdpa"
+  },
+  "E4_Golden_LFR": {
+    "exp_id": "E4_Golden_LFR",
+    "desc": "Full framework: Golden SFT, LFR+replay, QLoRA, AdamW, SDPA",
+    "tokens_processed": 2015232,
+    "total_steps": 123,
+    "final_val_ppl": 6.1602,
+    "best_val_ppl": 6.058,
+    "avg_tps": 3905.9,
+    "peak_vram_gb": 4.45,
+    "total_time_min": 140.2,
+    "trainable_params": 41943040,
+    "ppl_history": [
+      7.2712,
+      6.4389,
+      6.058,
+      6.8873,
+      6.1602
+    ],
+    "optimizer": "adamw",
+    "attention": "sdpa"
+  },
+  "E5_Golden_LFR_GaLore": {
+    "exp_id": "E5_Golden_LFR_GaLore",
+    "desc": "GaLore: Golden SFT, LFR+replay, QLoRA+GaLoreAdamW8bit, SDPA",
+    "tokens_processed": 2015232,
+    "total_steps": 123,
+    "final_val_ppl": 6.1329,
+    "best_val_ppl": 6.1329,
+    "avg_tps": 3884.9,
+    "peak_vram_gb": 4.39,
+    "total_time_min": 140.1,
+    "trainable_params": 41943040,
+    "ppl_history": [
+      6.943,
+      6.7809,
+      7.5313,
+      6.6824,
+      6.1329
+    ],
+    "optimizer": "galore_adamw8bit",
+    "attention": "sdpa"
+  },
+  "E6_Golden_LFR_xFormers": {
+    "exp_id": "E6_Golden_LFR_xFormers",
+    "desc": "BetterTransformer: Golden SFT, LFR+replay, QLoRA, AdamW, BetterTransformer",
+    "tokens_processed": 2015232,
+    "total_steps": 123,
+    "final_val_ppl": 6.3073,
+    "best_val_ppl": 6.3073,
+    "avg_tps": 3782.5,
+    "peak_vram_gb": 4.45,
+    "total_time_min": 145.1,
+    "trainable_params": 41943040,
+    "ppl_history": [
+      6.7323,
+      6.9387,
+      6.6684,
+      6.5821,
+      6.3073
+    ],
+    "optimizer": "adamw",
+    "attention": "sdpa_fallback"
+  }
+}

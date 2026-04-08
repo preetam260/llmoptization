@@ -1,0 +1,606 @@
+{
+  "training": {
+    "E1_Control_LoRA": {
+      "exp_id": "E1_Control_LoRA",
+      "desc": "Baseline: Alpaca control, random order, QLoRA, AdamW, SDPA",
+      "tokens_processed": 2015232,
+      "total_steps": 123,
+      "final_val_ppl": 6.906,
+      "best_val_ppl": 6.6811,
+      "avg_tps": 3982.1,
+      "peak_vram_gb": 4.45,
+      "total_time_min": 137.3,
+      "trainable_params": 41943040,
+      "ppl_history": [
+        6.6811,
+        8.1384,
+        7.3853,
+        6.9279,
+        6.906
+      ],
+      "optimizer": "adamw",
+      "attention": "sdpa"
+    },
+    "E2_Golden_LoRA": {
+      "exp_id": "E2_Golden_LoRA",
+      "desc": "Data quality: Golden SFT, random order, QLoRA, AdamW, SDPA",
+      "tokens_processed": 2015232,
+      "total_steps": 123,
+      "final_val_ppl": 6.4266,
+      "best_val_ppl": 5.9316,
+      "avg_tps": 3884.5,
+      "peak_vram_gb": 4.48,
+      "total_time_min": 140.8,
+      "trainable_params": 41943040,
+      "ppl_history": [
+        6.1608,
+        5.9316,
+        6.0728,
+        5.9573,
+        6.4266
+      ],
+      "optimizer": "adamw",
+      "attention": "sdpa"
+    },
+    "E3_Control_LFR": {
+      "exp_id": "E3_Control_LFR",
+      "desc": "Curriculum: Alpaca control, LFR+replay, QLoRA, AdamW, SDPA",
+      "tokens_processed": 2015232,
+      "total_steps": 123,
+      "final_val_ppl": 6.3226,
+      "best_val_ppl": 6.1582,
+      "avg_tps": 3983.3,
+      "peak_vram_gb": 4.46,
+      "total_time_min": 136.7,
+      "trainable_params": 41943040,
+      "ppl_history": [
+        6.8812,
+        6.9161,
+        7.1594,
+        6.1582,
+        6.3226
+      ],
+      "optimizer": "adamw",
+      "attention": "sdpa"
+    },
+    "E4_Golden_LFR": {
+      "exp_id": "E4_Golden_LFR",
+      "desc": "Full framework: Golden SFT, LFR+replay, QLoRA, AdamW, SDPA",
+      "tokens_processed": 2015232,
+      "total_steps": 123,
+      "final_val_ppl": 6.1602,
+      "best_val_ppl": 6.058,
+      "avg_tps": 3905.9,
+      "peak_vram_gb": 4.45,
+      "total_time_min": 140.2,
+      "trainable_params": 41943040,
+      "ppl_history": [
+        7.2712,
+        6.4389,
+        6.058,
+        6.8873,
+        6.1602
+      ],
+      "optimizer": "adamw",
+      "attention": "sdpa"
+    },
+    "E5_Golden_LFR_GaLore": {
+      "exp_id": "E5_Golden_LFR_GaLore",
+      "desc": "GaLore: Golden SFT, LFR+replay, QLoRA+GaLoreAdamW8bit, SDPA",
+      "tokens_processed": 2015232,
+      "total_steps": 123,
+      "final_val_ppl": 6.1329,
+      "best_val_ppl": 6.1329,
+      "avg_tps": 3884.9,
+      "peak_vram_gb": 4.39,
+      "total_time_min": 140.1,
+      "trainable_params": 41943040,
+      "ppl_history": [
+        6.943,
+        6.7809,
+        7.5313,
+        6.6824,
+        6.1329
+      ],
+      "optimizer": "galore_adamw8bit",
+      "attention": "sdpa"
+    },
+    "E6_Golden_LFR_xFormers": {
+      "exp_id": "E6_Golden_LFR_xFormers",
+      "desc": "BetterTransformer: Golden SFT, LFR+replay, QLoRA, AdamW, BetterTransformer",
+      "tokens_processed": 2015232,
+      "total_steps": 123,
+      "final_val_ppl": 6.3073,
+      "best_val_ppl": 6.3073,
+      "avg_tps": 3782.5,
+      "peak_vram_gb": 4.45,
+      "total_time_min": 145.1,
+      "trainable_params": 41943040,
+      "ppl_history": [
+        6.7323,
+        6.9387,
+        6.6684,
+        6.5821,
+        6.3073
+      ],
+      "optimizer": "adamw",
+      "attention": "sdpa_fallback"
+    }
+  },
+  "mmlu": {
+    "E1_Control_LoRA": {
+      "exp_id": "E1_Control_LoRA",
+      "adapter_path": "/kaggle/working/experiments/E1_Control_LoRA/final_adapter",
+      "mmlu_accuracy": 0.1531,
+      "correct": 75,
+      "total": 490,
+      "per_category": {
+        "biology": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "history": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "other": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "computer science": {
+          "correct": 8,
+          "total": 35,
+          "acc": 0.2286
+        },
+        "psychology": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "physics": {
+          "correct": 3,
+          "total": 35,
+          "acc": 0.0857
+        },
+        "math": {
+          "correct": 3,
+          "total": 35,
+          "acc": 0.0857
+        },
+        "health": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        },
+        "chemistry": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "philosophy": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "law": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "economics": {
+          "correct": 3,
+          "total": 35,
+          "acc": 0.0857
+        },
+        "business": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        },
+        "engineering": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        }
+      }
+    },
+    "E2_Golden_LoRA": {
+      "exp_id": "E2_Golden_LoRA",
+      "adapter_path": "/kaggle/working/experiments/E2_Golden_LoRA/final_adapter",
+      "mmlu_accuracy": 0.1816,
+      "correct": 89,
+      "total": 490,
+      "per_category": {
+        "biology": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "history": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "other": {
+          "correct": 8,
+          "total": 35,
+          "acc": 0.2286
+        },
+        "computer science": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "psychology": {
+          "correct": 9,
+          "total": 35,
+          "acc": 0.2571
+        },
+        "physics": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        },
+        "math": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        },
+        "health": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        },
+        "chemistry": {
+          "correct": 8,
+          "total": 35,
+          "acc": 0.2286
+        },
+        "philosophy": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "law": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        },
+        "economics": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "business": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        },
+        "engineering": {
+          "correct": 3,
+          "total": 35,
+          "acc": 0.0857
+        }
+      }
+    },
+    "E3_Control_LFR": {
+      "exp_id": "E3_Control_LFR",
+      "adapter_path": "/kaggle/working/experiments/E3_Control_LFR/final_adapter",
+      "mmlu_accuracy": 0.2102,
+      "correct": 103,
+      "total": 490,
+      "per_category": {
+        "biology": {
+          "correct": 9,
+          "total": 35,
+          "acc": 0.2571
+        },
+        "history": {
+          "correct": 12,
+          "total": 35,
+          "acc": 0.3429
+        },
+        "other": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "computer science": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "psychology": {
+          "correct": 12,
+          "total": 35,
+          "acc": 0.3429
+        },
+        "physics": {
+          "correct": 4,
+          "total": 35,
+          "acc": 0.1143
+        },
+        "math": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "health": {
+          "correct": 9,
+          "total": 35,
+          "acc": 0.2571
+        },
+        "chemistry": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "philosophy": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "law": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "economics": {
+          "correct": 8,
+          "total": 35,
+          "acc": 0.2286
+        },
+        "business": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        },
+        "engineering": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        }
+      }
+    },
+    "E4_Golden_LFR": {
+      "exp_id": "E4_Golden_LFR",
+      "adapter_path": "/kaggle/working/experiments/E4_Golden_LFR/final_adapter",
+      "mmlu_accuracy": 0.2286,
+      "correct": 112,
+      "total": 490,
+      "per_category": {
+        "biology": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "history": {
+          "correct": 10,
+          "total": 35,
+          "acc": 0.2857
+        },
+        "other": {
+          "correct": 10,
+          "total": 35,
+          "acc": 0.2857
+        },
+        "computer science": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "psychology": {
+          "correct": 14,
+          "total": 35,
+          "acc": 0.4
+        },
+        "physics": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "math": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        },
+        "health": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "chemistry": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "philosophy": {
+          "correct": 10,
+          "total": 35,
+          "acc": 0.2857
+        },
+        "law": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "economics": {
+          "correct": 9,
+          "total": 35,
+          "acc": 0.2571
+        },
+        "business": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        },
+        "engineering": {
+          "correct": 3,
+          "total": 35,
+          "acc": 0.0857
+        }
+      }
+    },
+    "E5_Golden_LFR_GaLore": {
+      "exp_id": "E5_Golden_LFR_GaLore",
+      "adapter_path": "/kaggle/working/experiments/E5_Golden_LFR_GaLore/final_adapter",
+      "mmlu_accuracy": 0.2429,
+      "correct": 119,
+      "total": 490,
+      "per_category": {
+        "biology": {
+          "correct": 13,
+          "total": 35,
+          "acc": 0.3714
+        },
+        "history": {
+          "correct": 12,
+          "total": 35,
+          "acc": 0.3429
+        },
+        "other": {
+          "correct": 9,
+          "total": 35,
+          "acc": 0.2571
+        },
+        "computer science": {
+          "correct": 8,
+          "total": 35,
+          "acc": 0.2286
+        },
+        "psychology": {
+          "correct": 17,
+          "total": 35,
+          "acc": 0.4857
+        },
+        "physics": {
+          "correct": 4,
+          "total": 35,
+          "acc": 0.1143
+        },
+        "math": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        },
+        "health": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "chemistry": {
+          "correct": 10,
+          "total": 35,
+          "acc": 0.2857
+        },
+        "philosophy": {
+          "correct": 10,
+          "total": 35,
+          "acc": 0.2857
+        },
+        "law": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "economics": {
+          "correct": 9,
+          "total": 35,
+          "acc": 0.2571
+        },
+        "business": {
+          "correct": 4,
+          "total": 35,
+          "acc": 0.1143
+        },
+        "engineering": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        }
+      }
+    },
+    "E6_Golden_LFR_xFormers": {
+      "exp_id": "E6_Golden_LFR_xFormers",
+      "adapter_path": "/kaggle/working/experiments/E6_Golden_LFR_xFormers/final_adapter",
+      "mmlu_accuracy": 0.2327,
+      "correct": 114,
+      "total": 490,
+      "per_category": {
+        "biology": {
+          "correct": 12,
+          "total": 35,
+          "acc": 0.3429
+        },
+        "history": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "other": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "computer science": {
+          "correct": 11,
+          "total": 35,
+          "acc": 0.3143
+        },
+        "psychology": {
+          "correct": 20,
+          "total": 35,
+          "acc": 0.5714
+        },
+        "physics": {
+          "correct": 8,
+          "total": 35,
+          "acc": 0.2286
+        },
+        "math": {
+          "correct": 3,
+          "total": 35,
+          "acc": 0.0857
+        },
+        "health": {
+          "correct": 6,
+          "total": 35,
+          "acc": 0.1714
+        },
+        "chemistry": {
+          "correct": 8,
+          "total": 35,
+          "acc": 0.2286
+        },
+        "philosophy": {
+          "correct": 7,
+          "total": 35,
+          "acc": 0.2
+        },
+        "law": {
+          "correct": 5,
+          "total": 35,
+          "acc": 0.1429
+        },
+        "economics": {
+          "correct": 12,
+          "total": 35,
+          "acc": 0.3429
+        },
+        "business": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        },
+        "engineering": {
+          "correct": 2,
+          "total": 35,
+          "acc": 0.0571
+        }
+      }
+    }
+  }
+}
