@@ -9,12 +9,12 @@
 **Training Optimization of Large Language Models: A Modular Approach**
 
 ### 1.2 Team
-| Name | Role | Email |
-|------|------|-------|
-| Aneesh Gunda | Developer / Researcher | aneeshg0904@gmail.com |
-| Preetam Sasisekhara Kommavarapu | Developer / Researcher | kspreetam2608@gmail.com |
-| Srujana Inturi | Guide | isrujana_cse@cbit.ac.in |
-| G. Vanitha | Guide | gvanitha_cse@cbit.ac.in |
+| Name | Role | 
+|------|------|
+| Aneesh Gunda | Developer / Researcher |
+| Preetam Sasisekhara Kommavarapu | Developer / Researcher | 
+| Srujana Inturi | Guide | 
+| G. Vanitha | Guide |
 
 ### 1.3 Institution
 Department of Computer Science and Engineering, Chaitanya Bharathi Institute of Technology (CBIT), Hyderabad, India
